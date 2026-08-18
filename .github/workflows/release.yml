@@ -14,5 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
-        # Release Please v4 automatically looks for .release-please-config.json 
-        # and .release-please-manifest.json in the repository root.
+        with:
+          config-file: release-please-config.json
+          manifest-file: release-please-manifest.json
