@@ -21,7 +21,7 @@ const GalaxyBackground = () => {
   return (
     <div className="absolute inset-0 z-[-1] overflow-hidden bg-primary">
       {/* Background radial gradient for the "galaxy" core glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/20 via-primary to-primary opacity-50"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-accent/20 via-primary to-primary opacity-50"></div>
       
       {stars.map((star) => (
         <motion.div

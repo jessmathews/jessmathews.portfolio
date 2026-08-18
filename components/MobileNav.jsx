@@ -43,7 +43,7 @@ const MobileNav = () => {
             Projects
           </Link>
           <Link 
-            href="/contact" 
+            href="/#contact" 
             className="text-xl capitalize hover:text-accent transition-all"
             onClick={() => setOpen(false)}
           >

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import Footer from "@/components/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -25,13 +26,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={jetbrainsMono.className}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${jetbrainsMono.className} min-h-screen flex flex-col`}>
         <Header />
         <StairTransition/>
         <PageTransition>
-          {children}
-          </PageTransition></body>
+          <div className="grow">
+            {children}
+          </div>
+        </PageTransition>
+        <Footer />
+      </body>
     </html>
   );
 }

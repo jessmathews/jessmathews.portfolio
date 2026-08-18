@@ -1,15 +1,14 @@
-import React from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import Link from 'next/link';
+import Link from "next/link";
+import { FaEnvelope,FaMap, FaPhone, FaGithub, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
 
-const Contact = () => {
+const ContactSection = () => {
   return (
-    <main className="min-h-screen flex items-center justify-center pt-24 pb-12 px-4">
-      <div className="max-w-3xl w-full bg-white/5 border border-white/10 rounded-3xl p-8 md:p-16 backdrop-blur-sm">
+    <section id="contact" className="w-full py-24 bg-primary/95 px-4">
+      <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-8 md:p-16 backdrop-blur-sm">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Let's <span className="text-accent">Connect</span>
-          </h1>
+          </h2>
           <p className="text-gray-400 text-lg">
             I'm currently available for freelance work and full-time opportunities.
             Feel free to reach out to me!
@@ -24,9 +23,9 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-gray-400 text-sm mb-1">Email</h3>
-                <a href="mailto:hello@jessmathews.com" className="text-lg font-medium hover:text-accent transition-colors">
+                <Link href="mailto:hello@jessmathews.com" className="text-lg font-medium hover:text-accent transition-colors">
                   hello@jessmathews.com
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -36,17 +35,19 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-gray-400 text-sm mb-1">Phone</h3>
-                <p className="text-lg font-medium">+1 (555) 123-4567</p>
+                <Link href="tel:+918547773974" className="text-lg font-medium hover:text-accent transition-colors">
+                  +91 85477 73974
+                </Link>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent shrink-0">
-                <FaMapMarkerAlt className="text-xl" />
+                <FaMap className="text-xl" />
               </div>
               <div>
                 <h3 className="text-gray-400 text-sm mb-1">Location</h3>
-                <p className="text-lg font-medium">San Francisco, CA</p>
+                <p className="text-lg font-medium">Kottayam, Kerala</p>
               </div>
             </div>
           </div>
@@ -61,14 +62,14 @@ const Contact = () => {
                 <FaLinkedin />
               </Link>
               <Link href="https://x.com/i_am_jezz" target="_blank" className="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all text-xl">
-                <FaTwitter />
+                <FaSquareXTwitter />
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
-export default Contact;
+export default ContactSection;
