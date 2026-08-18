@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.3.0...jessmathews.portfolio-v0.3.1) (2026-08-18)
+
+
+### Bug Fixes
+
+* Replace Next.js Image component with standard img tag in LogoLoo… ([6c4a60e](https://github.com/jessmathews/jessmathews.portfolio/commit/6c4a60ee91ef314be9227cc87552b5aaf42acb3e))
+* Replace Next.js Image component with standard img tag in LogoLoop for improved compatibility ([9bd7003](https://github.com/jessmathews/jessmathews.portfolio/commit/9bd700372ed485077e4927125535a32d0405d2b0))
+
 ## [0.3.0](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.2.0...jessmathews.portfolio-v0.3.0) (2026-08-18)
 
 
