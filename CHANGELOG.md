@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.2.0...jessmathews.portfolio-v0.3.0) (2026-08-18)
+
+
+### Features
+
+* Add TextType component for dynamic text animation; integrate into HeroSection and update dependencies ([9a7672f](https://github.com/jessmathews/jessmathews.portfolio/commit/9a7672fc7c6576b7c76368b5bc07244e8dc92ee2))
+* Update ESLint configuration and dependencies; enhance styling in various components for improved responsiveness ([d6906f9](https://github.com/jessmathews/jessmathews.portfolio/commit/d6906f9a02ae63d7bfa6c12891128e99e3bbd34e))
+* Update package dependencies; remove outdated ESLint packages an… ([fe3004f](https://github.com/jessmathews/jessmathews.portfolio/commit/fe3004f8249d19721931172553d2ec9894ef8a50))
+* Update package dependencies; remove outdated ESLint packages and add GSAP for animations ([6eeab4a](https://github.com/jessmathews/jessmathews.portfolio/commit/6eeab4a9e7a1709e927c5fc5495a6fca7fdeaab3))
+
 ## [0.2.0](https://github.com/jessmathews/jessmathews.github.io/compare/jessmathews.portfolio-v0.1.0...jessmathews.portfolio-v0.2.0) (2026-08-18)
 
 
