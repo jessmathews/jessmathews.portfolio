@@ -2,12 +2,12 @@ import LogoLoop from "@/components/LogoLoop";
 
 const SkillsSection = () => {
   const mySkills = [
-"react", "next", "tailwind", "nodejs", "js",
-"figma", "java", "python", "c", "cpp", "git",
-"docker", "mongodb", "postgres", "supabase", "ros",
-"flask", "nextjs", "vite", "blender", "arduino",
-"raspberrypi", "linux", "aws", "html", "css",
-"nginx"
+    "react", "next", "tailwind", "nodejs", "js",
+    "figma", "java", "python", "c", "cpp", "git",
+    "docker", "mongodb", "postgres", "supabase", "ros",
+    "flask", "nextjs", "vite", "blender", "arduino",
+    "raspberrypi", "linux", "aws", "html", "css",
+    "nginx"
   ];
 
   const allLogos = mySkills.map(slug => ({
@@ -23,11 +23,11 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="w-full py-24 bg-primary/95 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto mb-16">
-        <h2 className="text-4xl font-bold text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center">
           My <span className="text-accent">Skills</span>
         </h2>
       </div>
-        
+
       <div className="flex flex-col gap-10 w-full max-w-6xl mx-auto">
         <LogoLoop
           logos={row1}
@@ -40,7 +40,7 @@ const SkillsSection = () => {
           scaleOnHover
           hoverSpeed={10}
         />
-        
+
         <LogoLoop
           logos={row2}
           speed={40}
@@ -52,7 +52,7 @@ const SkillsSection = () => {
           scaleOnHover
           hoverSpeed={10}
         />
-        
+
         <LogoLoop
           logos={row3}
           speed={40}
