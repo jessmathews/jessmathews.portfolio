@@ -29,25 +29,25 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="w-full py-24 bg-primary px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">
           Featured <span className="text-accent">Projects</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white/5 rounded-2xl overflow-hidden border border-white/5 hover:border-accent/50 transition-all flex flex-col"
             >
               {/* Placeholder Image Area */}
-              <div className="h-48 bg-linear-to-br from-white/10 to-transparent w-full flex items-center justify-center">
-                <span className="text-gray-500 font-mono text-sm">Project Image Placeholder</span>
+              <div className="h-48 bg-linear-to-br from-white/10 to-transparent w-full flex items-center justify-center p-4 text-center">
+                <span className="text-gray-500 font-mono text-xs sm:text-sm">Project Image Placeholder</span>
               </div>
-              
-              <div className="p-6 flex flex-col grow">
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+
+              <div className="p-5 sm:p-6 flex flex-col grow">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3">{project.title}</h3>
                 <p className="text-gray-400 mb-6 grow">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((t, i) => (
                     <span key={i} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">
@@ -55,17 +55,17 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-4">
-                  <Link 
-                    href={project.github} 
+                  <Link
+                    href={project.github}
                     target="_blank"
                     className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors"
                   >
                     <FaGithub className="text-lg" /> Code
                   </Link>
-                  <Link 
-                    href={project.live} 
+                  <Link
+                    href={project.live}
                     className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors"
                   >
                     <FaLink className="text-lg" /> Live Demo

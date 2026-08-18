@@ -18,32 +18,32 @@ const MobileNav = () => {
       <SheetContent className="flex flex-col">
         {/* Title required for accessibility by Radix UI */}
         <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
-        
-        <div className="mt-32 mb-40 text-center text-2xl">
+
+        <div className="mt-20 mb-20 sm:mt-32 sm:mb-40 text-center text-2xl">
           <Link href="/" onClick={() => setOpen(false)}>
-            <div className="text-4xl font-semibold">
+            <div className="text-3xl sm:text-4xl font-semibold">
               Jess<span className="text-accent">.</span>
             </div>
           </Link>
         </div>
-        
+
         <nav className="flex flex-col justify-center items-center gap-8">
-          <Link 
-            href="/#skills" 
+          <Link
+            href="/#skills"
             className="text-xl capitalize hover:text-accent transition-all"
             onClick={() => setOpen(false)}
           >
             Skills
           </Link>
-          <Link 
-            href="/#projects" 
+          <Link
+            href="/#projects"
             className="text-xl capitalize hover:text-accent transition-all"
             onClick={() => setOpen(false)}
           >
             Projects
           </Link>
-          <Link 
-            href="/#contact" 
+          <Link
+            href="/#contact"
             className="text-xl capitalize hover:text-accent transition-all"
             onClick={() => setOpen(false)}
           >
