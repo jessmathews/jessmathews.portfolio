@@ -24,8 +24,6 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.6",
-    "@eslint/js": "^10.0.1",
     "@tailwindcss/postcss": "^4.3.3",
     "autoprefixer": "^10.5",
     "eslint": "^9",
