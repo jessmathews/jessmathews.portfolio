@@ -31,21 +31,39 @@ const MobileNav = () => {
           <Link
             href="/#skills"
             className="text-xl capitalize hover:text-accent transition-all"
-            onClick={() => setOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              setOpen(false);
+              setTimeout(() => {
+                document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
+              }, 300);
+            }}
           >
             Skills
           </Link>
           <Link
             href="/#projects"
             className="text-xl capitalize hover:text-accent transition-all"
-            onClick={() => setOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              setOpen(false);
+              setTimeout(() => {
+                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+              }, 300);
+            }}
           >
             Projects
           </Link>
           <Link
             href="/#contact"
             className="text-xl capitalize hover:text-accent transition-all"
-            onClick={() => setOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              setOpen(false);
+              setTimeout(() => {
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }, 300);
+            }}
           >
             Contact
           </Link>
