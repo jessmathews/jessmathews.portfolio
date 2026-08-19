@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.3.1...jessmathews.portfolio-v0.4.0) (2026-08-19)
+
+
+### Features
+
+* Add Swiper for enhanced project display; create ProjectCard component and update navigation links for smooth scrolling ([cc3834e](https://github.com/jessmathews/jessmathews.portfolio/commit/cc3834ee9fd8f0f897523a5df19aca19afb23435))
+* Integrate ClickSpark component for interactive spark effects on the homepage ([1c08722](https://github.com/jessmathews/jessmathews.portfolio/commit/1c0872232c0ed59eddcdf28b703e1b29e62bf568))
+* replace GalaxyBackground with GridScan in HeroSection and update dependencies ([6109bce](https://github.com/jessmathews/jessmathews.portfolio/commit/6109bce5acfa274734bfce3630c972732cff121c))
+* Revamp HeroSection text; enhance ProjectCard with dynamic image handling and update project listings in ProjectsSection ([a68f8f5](https://github.com/jessmathews/jessmathews.portfolio/commit/a68f8f5d663a6f1536329525437eec73ff560f10))
+* Update HeroSection and ProjectCard styles; fix GitHub link in ProjectsSection ([d222760](https://github.com/jessmathews/jessmathews.portfolio/commit/d2227604c246087b6b36b4331020de71f12f359d))
+* Update metadata in layout.jsx for consistency; add robots.txt for SEO optimization ([6c7f4cd](https://github.com/jessmathews/jessmathews.portfolio/commit/6c7f4cd6355be92aadded9ebb1cb6d57b0e2cb88))
+
 ## [0.3.1](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.3.0...jessmathews.portfolio-v0.3.1) (2026-08-18)
 
 
