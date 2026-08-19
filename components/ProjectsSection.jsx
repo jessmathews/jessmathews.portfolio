@@ -1,11 +1,10 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import ProjectCard from "./ProjectCard";
@@ -44,7 +43,14 @@ const ProjectsSection = () => {
       title: "VoteChain",
       description: "A decentralized voting system built on blockchain technology.",
       tech: ["Python", "Solidity", "Web3.py", "React"],
-      github: "hhttps://github.com/jessmathews/VoteChain",
+      github: "https://github.com/jessmathews/VoteChain",
+      live: "#",
+    },
+    {
+      title: "GNSS-Webapp",
+      description: "A web application for visualizing and analyzing GNSS data.",
+      tech: ["Python", "Django", "React"],
+      github: "https://github.com/jessmathews/GNSS-Webapp",
       live: "#",
     },
   ];
@@ -57,18 +63,9 @@ const ProjectsSection = () => {
         </h2>
 
         <div className="w-full relative sm:px-10">
-          <style>{`
-            @media (max-width: 639px) {
-              .projects-swiper .swiper-button-next,
-              .projects-swiper .swiper-button-prev {
-                display: none !important;
-              }
-            }
-          `}</style>
-
-          {/* Smooth blurred edge overlays */}
-          <div className="absolute top-0 left-0 bottom-16 w-8 sm:w-24 z-10 backdrop-blur-md sm:backdrop-blur-lg [mask-image:linear-gradient(to_right,black,transparent)] pointer-events-none" />
-          <div className="absolute top-0 right-0 bottom-16 w-8 sm:w-24 z-10 backdrop-blur-md sm:backdrop-blur-lg [mask-image:linear-gradient(to_left,black,transparent)] pointer-events-none" />
+          {/* Smooth gradient edge overlays to avoid Webkit jagged blur artifacts */}
+          <div className="absolute top-0 left-0 bottom-16 w-4 sm:w-16 z-10 bg-linear-to-r from-primary to-transparent pointer-events-none" />
+          <div className="absolute top-0 right-0 bottom-16 w-4 sm:w-16 z-10 bg-linear-to-l from-primary to-transparent pointer-events-none" />
 
           <Swiper
             grabCursor={true}
@@ -85,11 +82,9 @@ const ProjectsSection = () => {
               clickable: true,
               dynamicBullets: true,
             }}
-            navigation={true}
-            modules={[Pagination, Navigation, Autoplay]}
+            modules={[Pagination, Autoplay]}
             className="w-full pb-16! projects-swiper"
             style={{
-              "--swiper-navigation-color": "var(--color-accent)",
               "--swiper-pagination-color": "var(--color-accent)",
               "--swiper-pagination-bullet-inactive-color": "#4b5563",
             }}
@@ -103,7 +98,7 @@ const ProjectsSection = () => {
             {projects.map((project, index) => (
               <SwiperSlide 
                 key={index} 
-                className="h-auto! w-[85vw]! max-w-70 sm:max-w-none! sm:w-87.5! md:w-100"
+                className="h-auto! w-70! sm:w-87.5! md:w-100!"
               >
                 <ProjectCard project={project} />
               </SwiperSlide>

@@ -4,7 +4,7 @@ import TextType from "@/components/ui/TextType";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 pb-16">
       <GalaxyBackground />
 
       <div className="z-10 max-w-3xl">
