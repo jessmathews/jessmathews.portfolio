@@ -1,11 +1,27 @@
 import Link from "next/link";
-import GalaxyBackground from "@/components/GalaxyBackground";
+import GridScan from "@/components/GridScan";
 import TextType from "@/components/ui/TextType";
 
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 pb-16">
-      <GalaxyBackground />
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <GridScan
+          sensitivity={0.55}
+          lineThickness={2}
+          linesColor="#2F293A"
+          gridScale={0.1}
+          scanColor="#00c6b3"
+          scanOpacity={0.4}
+          enablePost={true}
+          bloomIntensity={0.6}
+          chromaticAberration={0.002}
+          noiseIntensity={0.015}
+          scanSoftness={1}
+          lineJitter={0.1}
+          scanGlow={0.5}
+       />
+      </div>
 
       <div className="z-10 max-w-3xl">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 min-h-32 sm:min-h-30 md:min-h-40">
