@@ -1,11 +1,27 @@
 import Link from "next/link";
-import GalaxyBackground from "@/components/GalaxyBackground";
+import GridScan from "@/components/GridScan";
 import TextType from "@/components/ui/TextType";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
-      <GalaxyBackground />
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 pb-16">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <GridScan
+          sensitivity={0.55}
+          lineThickness={2}
+          linesColor="#2F293A"
+          gridScale={0.1}
+          scanColor="#00c6b3"
+          scanOpacity={0.4}
+          enablePost={true}
+          bloomIntensity={0.6}
+          chromaticAberration={0.002}
+          noiseIntensity={0.015}
+          scanSoftness={1}
+          lineJitter={0.1}
+          scanGlow={0.5}
+       />
+      </div>
 
       <div className="z-10 max-w-3xl">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 min-h-32 sm:min-h-30 md:min-h-40">
@@ -29,7 +45,7 @@ const HeroSection = () => {
           className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8"
         />
         <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-2xl mx-auto px-2">
-          I craft responsive, dynamic, and beautiful web experiences. Passionate about bridging the gap between design and engineering.
+I build software and embedded systems that bridge the gap between hardware and the web. My work spans embedded systems, robotics, computer vision, full-stack development, and automation, with a focus on turning complex technical ideas into practical, reliable solutions.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-70 sm:max-w-none mx-auto">

@@ -1,79 +1,109 @@
-import Link from "next/link";
-import { FaGithub, FaLink } from "react-icons/fa6";
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Project Alpha",
-      description: "A comprehensive e-commerce dashboard with real-time analytics and inventory management.",
-      tech: ["Next.js", "Tailwind", "React Query"],
-      github: "https://github.com/jessmathews",
+      title: "Flasheroo",
+      description: "Convert your articles to flashcards for spaced repetition learning.",
+      tech: ["Python", "Streamlit", "Pytorch"],
+      github: "https://github.com/jessmathews/flasheroo",
+      live: "",
+    },
+    {
+      title: "ROS2 Autonomous Drone Control",
+      description: "ROS2 autonomous missions with mavros. Tested in SITL and hardware.",
+      tech: ["ROS2", "Python", "Ardupilot", "MAVROS"],
+      github: "https://github.com/jessmathews/ros2_autonomous_drone",
+      live: "",
+    },
+    {
+      title: "Sign2Speak",
+      description: "Sign language to text and audio with Generative AI.",
+      tech: ["Python", "OpenCV", "Tensorflow", "Tkinter", "Generative AI"],
+      github: "https://github.com/jessmathews/Sign2Speak",
       live: "#",
     },
     {
-      title: "Project Beta",
-      description: "An interactive educational platform featuring live code execution and video streaming.",
-      tech: ["React", "Node.js", "WebSockets"],
-      github: "https://github.com/jessmathews",
+      title: "Certificate Generator",
+      description: "Automatically generate certificates for participants of events and courses.",
+      tech: ["Python","Pillow", "Tkinter"],
+      github: "https://github.com/jessmathews/cert_generator",
       live: "#",
     },
     {
-      title: "Project Gamma",
-      description: "A minimalist task management tool with drag-and-drop functionality and offline support.",
-      tech: ["Next.js", "Framer Motion", "Supabase"],
-      github: "https://github.com/jessmathews",
+      title: "VoteChain",
+      description: "A decentralized voting system built on blockchain technology.",
+      tech: ["Python", "Solidity", "Web3.py", "React"],
+      github: "https://github.com/jessmathews/VoteChain",
+      live: "#",
+    },
+    {
+      title: "GNSS-Webapp",
+      description: "A web application for visualizing and analyzing GNSS data.",
+      tech: ["Python", "Django", "React"],
+      github: "https://github.com/jessmathews/GNSS-Webapp",
       live: "#",
     },
   ];
 
   return (
-    <section id="projects" className="w-full py-24 bg-primary px-4">
+    <section id="projects" className="w-full py-24 bg-primary px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">
           Featured <span className="text-accent">Projects</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white/5 rounded-2xl overflow-hidden border border-white/5 hover:border-accent/50 transition-all flex flex-col"
-            >
-              {/* Placeholder Image Area */}
-              <div className="h-48 bg-linear-to-br from-white/10 to-transparent w-full flex items-center justify-center p-4 text-center">
-                <span className="text-gray-500 font-mono text-xs sm:text-sm">Project Image Placeholder</span>
-              </div>
+        <div className="w-full relative sm:px-10">
+          {/* Smooth gradient edge overlays to avoid Webkit jagged blur artifacts */}
+          <div className="absolute top-0 left-0 bottom-16 w-4 sm:w-16 z-10 bg-linear-to-r from-primary to-transparent pointer-events-none" />
+          <div className="absolute top-0 right-0 bottom-16 w-4 sm:w-16 z-10 bg-linear-to-l from-primary to-transparent pointer-events-none" />
 
-              <div className="p-5 sm:p-6 flex flex-col grow">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-gray-400 mb-6 grow">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((t, i) => (
-                    <span key={i} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-4">
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors"
-                  >
-                    <FaGithub className="text-lg" /> Code
-                  </Link>
-                  <Link
-                    href={project.live}
-                    className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors"
-                  >
-                    <FaLink className="text-lg" /> Live Demo
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
+          <Swiper
+            grabCursor={true}
+            spaceBetween={16}
+            slidesPerView={"auto"}
+            centeredSlides={true}
+            speed={800}
+            loop={true}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            modules={[Pagination, Autoplay]}
+            className="w-full pb-16! projects-swiper"
+            style={{
+              "--swiper-pagination-color": "var(--color-accent)",
+              "--swiper-pagination-bullet-inactive-color": "#4b5563",
+            }}
+            breakpoints={{
+              640: {
+                spaceBetween: 30,
+                centeredSlides: false,
+              }
+            }}
+          >
+            {projects.map((project, index) => (
+              <SwiperSlide 
+                key={index} 
+                className="h-auto! w-70! sm:w-87.5! md:w-100!"
+              >
+                <ProjectCard project={project} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
