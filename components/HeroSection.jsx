@@ -29,7 +29,7 @@ const HeroSection = () => {
           className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8"
         />
         <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-2xl mx-auto px-2">
-          I craft responsive, dynamic, and beautiful web experiences. Passionate about bridging the gap between design and engineering.
+I build software and embedded systems that bridge the gap between hardware and the web. My work spans embedded systems, robotics, computer vision, full-stack development, and automation, with a focus on turning complex technical ideas into practical, reliable solutions.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-70 sm:max-w-none mx-auto">

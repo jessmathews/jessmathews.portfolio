@@ -13,24 +13,38 @@ import ProjectCard from "./ProjectCard";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Project Alpha",
-      description: "A comprehensive e-commerce dashboard with real-time analytics and inventory management.",
-      tech: ["Next.js", "Tailwind", "React Query"],
-      github: "https://github.com/jessmathews",
+      title: "Flasheroo",
+      description: "Convert your articles to flashcards for spaced repetition learning.",
+      tech: ["Python", "Streamlit", "Pytorch"],
+      github: "https://github.com/jessmathews/flasheroo",
+      live: "",
+    },
+    {
+      title: "ROS2 Autonomous Drone Control",
+      description: "ROS2 autonomous missions with mavros. Tested in SITL and hardware.",
+      tech: ["ROS2", "Python", "Ardupilot", "MAVROS"],
+      github: "https://github.com/jessmathews/ros2_autonomous_drone",
+      live: "",
+    },
+    {
+      title: "Sign2Speak",
+      description: "Sign language to text and audio with Generative AI.",
+      tech: ["Python", "OpenCV", "Tensorflow", "Tkinter", "Generative AI"],
+      github: "https://github.com/jessmathews/Sign2Speak",
       live: "#",
     },
     {
-      title: "Project Beta",
-      description: "An interactive educational platform featuring live code execution and video streaming.",
-      tech: ["React", "Node.js", "WebSockets"],
-      github: "https://github.com/jessmathews",
+      title: "Certificate Generator",
+      description: "Automatically generate certificates for participants of events and courses.",
+      tech: ["Python","Pillow", "Tkinter"],
+      github: "https://github.com/jessmathews/cert_generator",
       live: "#",
     },
     {
-      title: "Project Gamma",
-      description: "A minimalist task management tool with drag-and-drop functionality and offline support.",
-      tech: ["Next.js", "Framer Motion", "Supabase"],
-      github: "https://github.com/jessmathews",
+      title: "VoteChain",
+      description: "A decentralized voting system built on blockchain technology.",
+      tech: ["Python", "Solidity", "Web3.py", "React"],
+      github: "hhttps://github.com/jessmathews/VoteChain",
       live: "#",
     },
   ];
@@ -51,6 +65,11 @@ const ProjectsSection = () => {
               }
             }
           `}</style>
+
+          {/* Smooth blurred edge overlays */}
+          <div className="absolute top-0 left-0 bottom-16 w-8 sm:w-24 z-10 backdrop-blur-md sm:backdrop-blur-lg [mask-image:linear-gradient(to_right,black,transparent)] pointer-events-none" />
+          <div className="absolute top-0 right-0 bottom-16 w-8 sm:w-24 z-10 backdrop-blur-md sm:backdrop-blur-lg [mask-image:linear-gradient(to_left,black,transparent)] pointer-events-none" />
+
           <Swiper
             grabCursor={true}
             spaceBetween={16}
