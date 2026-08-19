@@ -1,6 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-//components
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
@@ -13,15 +12,18 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Jess Mathews",
-  description: "Web Design Portfolio of Jess Mathews",
+  title: "Jess's Portfolio",
+  description: "Portfolio of Jess Mathews",
   openGraph:{
     title: "Jess Mathews",
-    description: "Web Design Portfolio of Jess Mathews",
+    description: "Portfolio of Jess Mathews",
     type: "website",
     site_name: "Jess Mathews",
     locale: "en_US",
-  }
+  },
+  authors: [{ name: "Jess Mathews" }],
+  creator: "Jess Mathews",
+  publisher: "Jess Mathews",
 };
 
 export default function RootLayout({ children }) {
