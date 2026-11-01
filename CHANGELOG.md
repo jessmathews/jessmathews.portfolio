@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.5.0...jessmathews.portfolio-v0.5.1) (2026-11-01)
+
+
+### Bug Fixes
+
+* update email address in ContactSection component ([c981366](https://github.com/jessmathews/jessmathews.portfolio/commit/c981366982593cdbd059130bbe58db441eb030c1))
+
 ## [0.5.0](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.4.0...jessmathews.portfolio-v0.5.0) (2026-09-04)
 
 
