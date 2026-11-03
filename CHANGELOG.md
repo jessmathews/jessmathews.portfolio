@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.2](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.5.1...jessmathews.portfolio-v0.5.2) (2026-11-03)
+
+
+### Bug Fixes
+
+* update packages for secuity ([fb7bb4b](https://github.com/jessmathews/jessmathews.portfolio/commit/fb7bb4bfa27dec1a039c350de38f6b446be864ce))
+* update packages for secuity ([a123731](https://github.com/jessmathews/jessmathews.portfolio/commit/a123731743c702b5408282452efefc1ace8099b2))
+
 ## [0.5.1](https://github.com/jessmathews/jessmathews.portfolio/compare/jessmathews.portfolio-v0.5.0...jessmathews.portfolio-v0.5.1) (2026-11-01)
 
 
